@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Papel Vivo | Sustentabilidade Digital</title>
+    <title>Papel Vivo | Arte, Sementes e Sustentabilidade</title>
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -12,121 +12,168 @@
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" tabindex="0">
 
-    <!-- Navbar -->
+    <!-- Cabeçalho / Menu de Navegação (Abas) -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand text-success fw-bold" href="#">
-                <i class="fa-solid fa-leaf"></i> Papel Vivo
+            <a class="navbar-brand text-success fw-bold d-flex align-items-center gap-2" href="#inicio">
+                <i class="fa-solid fa-seedling fs-3"></i> Papel Vivo
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav fw-medium">
                     <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#sobre">Nossa Missão</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#impacto">Calculadora de Impacto</a></li>
-                    <li class="nav-item"><a class="nav-link btn btn-success text-white px-4 ms-lg-3" href="#contato">Fale Conosco</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#alunos">Alunos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sementes">Sementes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tintas">Tintas Minerais</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#passo-a-passo">Passo a Passo</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section (Destaque Principal) -->
+    <!-- ABA 1: Início - Apresentação do Projeto -->
     <header id="inicio" class="hero-section text-center text-white d-flex align-items-center">
         <div class="container">
-            <h1 class="display-3 fw-bold mb-4">Sustentabilidade em cada detalhe.</h1>
-            <p class="lead mb-5">Transformando ideias em ações ecológicas. Reduza sua pegada de carbono com soluções digitais conscientes.</p>
-            <a href="#sobre" class="btn btn-light btn-lg text-success fw-bold px-5 rounded-pill shadow">Descubra Como</a>
+            <span class="badge bg-light text-success mb-3 px-3 py-2 rounded-pill shadow-sm">Projeto Escolar Sustentável</span>
+            <h1 class="display-3 fw-bold mb-4">De vida ao papel que você descarta.</h1>
+            <p class="lead mb-5 mx-auto" style="max-width: 700px;">
+                O <strong>Papel Vivo</strong> é um projeto que une reciclagem, agricultura e arte. 
+                Transformamos papel usado em papel semente, colorido naturalmente com tintas minerais extraídas do solo.
+            </p>
+            <a href="#passo-a-passo" class="btn btn-light btn-lg text-success fw-bold px-5 rounded-pill shadow">Veja como fazemos <i class="fa-solid fa-arrow-down ms-2"></i></a>
         </div>
     </header>
 
-    <!-- Seção Sobre (Cards de Recursos) -->
-    <section id="sobre" class="py-5 bg-light">
-        <div class="container py-5">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold text-success">Por que escolher o Papel Vivo?</h2>
-                <p class="text-muted">Nossos pilares para um mundo mais verde.</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-md-4 text-center">
-                    <div class="card border-0 shadow-sm h-100 p-4 hover-card">
-                        <i class="fa-solid fa-recycle fa-3x text-success mb-3"></i>
-                        <h4 class="fw-bold">100% Ecológico</h4>
-                        <p class="text-muted">Processos otimizados para gastar menos energia e gerar zero resíduos físicos.</p>
+    <!-- ABA 2: Alunos - Apresentação da Equipe -->
+    <section id="alunos" class="py-5 bg-light">
+        <div class="container py-5 text-center">
+            <h2 class="fw-bold text-success mb-3">Nossa Equipe</h2>
+            <p class="text-muted mb-5">Os alunos responsáveis por transformar essa ideia em realidade.</p>
+            
+            <div class="row justify-content-center g-4">
+                <!-- Aluno 1 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card border-0 shadow-sm p-4 h-100 bg-white hover-card">
+                        <div class="avatar-bg mx-auto mb-3 text-white bg-success d-flex align-items-center justify-content-center rounded-circle fs-1" style="width: 100px; height: 100px;">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h5 class="fw-bold">Nome do Aluno 1</h5>
+                        <p class="text-muted small">Pesquisa e Produção</p>
                     </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <div class="card border-0 shadow-sm h-100 p-4 hover-card">
-                        <i class="fa-solid fa-tree fa-3x text-success mb-3"></i>
-                        <h4 class="fw-bold">Plantio Ativo</h4>
-                        <p class="text-muted">Parte do nosso esforço é revertido para o reflorestamento de áreas degradadas.</p>
+                <!-- Aluno 2 -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="card border-0 shadow-sm p-4 h-100 bg-white hover-card">
+                        <div class="avatar-bg mx-auto mb-3 text-white bg-success d-flex align-items-center justify-content-center rounded-circle fs-1" style="width: 100px; height: 100px;">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h5 class="fw-bold">Nome do Aluno 2</h5>
+                        <p class="text-muted small">Design e Tintas Minerais</p>
                     </div>
                 </div>
-                <div class="col-md-4 text-center">
-                    <div class="card border-0 shadow-sm h-100 p-4 hover-card">
-                        <i class="fa-solid fa-lightbulb fa-3x text-success mb-3"></i>
-                        <h4 class="fw-bold">Inovação Limpa</h4>
-                        <p class="text-muted">Tecnologia de ponta aliada ao respeito absoluto pelo meio ambiente.</p>
-                    </div>
-                </div>
+                <!-- Adicione mais alunos copiando o bloco acima -->
             </div>
         </div>
     </section>
 
-    <!-- Seção Interativa: Calculadora de Impacto -->
-    <section id="impacto" class="py-5">
+    <!-- ABA 3: Sementes -->
+    <section id="sementes" class="py-5">
         <div class="container py-5">
             <div class="row align-items-center">
-                <div class="col-lg-6 mb-4 mb-lg-0">
-                    <h2 class="fw-bold text-success mb-3">Calcule seu Impacto</h2>
-                    <p class="text-muted lead">Descubra quantas árvores você pode salvar ao digitalizar seus processos com o Papel Vivo.</p>
+                <div class="col-lg-5 mb-4">
+                    <h2 class="fw-bold text-success mb-3">Sementes da Vida</h2>
+                    <p class="text-muted lead">Em vez de ir para o lixo, nosso papel vai para a terra. Escolhemos sementes de fácil germinação para compor nosso papel artesanal.</p>
                 </div>
-                <div class="col-lg-6 text-center bg-light p-5 rounded-4 shadow-sm">
-                    <label for="folhasInput" class="form-label fw-bold">Quantas folhas de papel você usa por mês?</label>
-                    <input type="number" id="folhasInput" class="form-control form-control-lg mb-3 text-center" placeholder="Ex: 5000">
-                    <button onclick="calcularArvores()" class="btn btn-success btn-lg w-100 mb-4 rounded-pill">Calcular Impacto</button>
-                    
-                    <div id="resultadoCalculo" class="d-none">
-                        <h3 class="text-success fw-bold"><i class="fa-solid fa-leaf"></i> <span id="arvoresSalvas">0</span> árvores</h3>
-                        <p class="text-muted mb-0">poderiam ser salvas por ano!</p>
+                <div class="col-lg-7">
+                    <div class="row g-4">
+                        <div class="col-sm-6">
+                            <div class="p-4 border rounded-4 border-success-subtle bg-light hover-card">
+                                <i class="fa-solid fa-leaf fs-2 text-success mb-3"></i>
+                                <h5 class="fw-bold">Manjericão</h5>
+                                <p class="text-muted small mb-0">Erva aromática perfeita para hortas caseiras, atrai abelhas e cresce rápido.</p>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="p-4 border rounded-4 border-success-subtle bg-light hover-card">
+                                <i class="fa-brands fa-pagelines fs-2 text-success mb-3"></i>
+                                <h5 class="fw-bold">Margarida</h5>
+                                <p class="text-muted small mb-0">Flores lindas que embelezam ambientes e ajudam os polinizadores locais.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção de Contato -->
-    <section id="contato" class="py-5 bg-success text-white">
+    <!-- ABA 4: Tintas Minerais -->
+    <section id="tintas" class="py-5 bg-success text-white">
         <div class="container py-5 text-center">
-            <h2 class="fw-bold mb-4">Pronto para fazer a diferença?</h2>
-            <p class="mb-5">Junte-se a nós e comece a sua jornada sustentável hoje mesmo.</p>
-            <form id="formContato" class="max-w-600 mx-auto bg-white p-4 rounded-4 shadow text-start">
-                <div class="mb-3">
-                    <label for="nome" class="form-label text-dark fw-bold">Nome</label>
-                    <input type="text" class="form-control" id="nome" required>
+            <h2 class="fw-bold mb-3">Tintas Minerais</h2>
+            <p class="mb-5 mx-auto text-light" style="max-width: 600px;">Pigmentação 100% natural, sem químicos agressivos. Utilizamos diferentes tons de solo para dar cor à nossa arte no Papel Vivo.</p>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-3 col-6">
+                    <div class="rounded-circle mx-auto mb-3 shadow" style="width: 120px; height: 120px; background-color: #8B4513; border: 4px solid white;"></div>
+                    <h5 class="fw-bold">Terra Roxa</h5>
                 </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label text-dark fw-bold">E-mail</label>
-                    <input type="email" class="form-control" id="email" required>
+                <div class="col-md-3 col-6">
+                    <div class="rounded-circle mx-auto mb-3 shadow" style="width: 120px; height: 120px; background-color: #D2B48C; border: 4px solid white;"></div>
+                    <h5 class="fw-bold">Ocre</h5>
                 </div>
-                <button type="submit" class="btn btn-success w-100 rounded-pill py-2">Enviar Mensagem</button>
-            </form>
+                <div class="col-md-3 col-6">
+                    <div class="rounded-circle mx-auto mb-3 shadow" style="width: 120px; height: 120px; background-color: #A0522D; border: 4px solid white;"></div>
+                    <h5 class="fw-bold">Siena Queimada</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABA 5: Passo a Passo -->
+    <section id="passo-a-passo" class="py-5">
+        <div class="container py-5">
+            <h2 class="fw-bold text-success text-center mb-5">Passo a Passo da Criação</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-3 text-center">
+                    <div class="passo-numero bg-success text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3 fs-3 fw-bold shadow" style="width: 70px; height: 70px;">1</div>
+                    <h5 class="fw-bold">Trituração</h5>
+                    <p class="text-muted small">O papel usado é picado e deixado de molho na água para formar a polpa base.</p>
+                </div>
+                
+                <div class="col-md-3 text-center">
+                    <div class="passo-numero bg-success text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3 fs-3 fw-bold shadow" style="width: 70px; height: 70px;">2</div>
+                    <h5 class="fw-bold">Mistura</h5>
+                    <p class="text-muted small">Adicionamos as sementes na polpa com cuidado para não danificá-las.</p>
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <div class="passo-numero bg-success text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3 fs-3 fw-bold shadow" style="width: 70px; height: 70px;">3</div>
+                    <h5 class="fw-bold">Moldagem</h5>
+                    <p class="text-muted small">Prensamos a polpa em uma tela de secagem para retirar o excesso de água.</p>
+                </div>
+
+                <div class="col-md-3 text-center">
+                    <div class="passo-numero bg-success text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3 fs-3 fw-bold shadow" style="width: 70px; height: 70px;">4</div>
+                    <h5 class="fw-bold">Arte</h5>
+                    <p class="text-muted small">Após seco, o papel recebe pintura artesanal utilizando nossas tintas minerais.</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-dark text-white text-center py-4">
         <div class="container">
-            <p class="mb-0">&copy; 2026 Papel Vivo. Todos os direitos reservados para um mundo melhor.</p>
+            <p class="mb-0"><i class="fa-solid fa-seedling text-success"></i> Projeto Papel Vivo - Sustentabilidade Escolar</p>
         </div>
     </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Script Personalizado -->
-    <script src="js/script.js"></script>
 </body>
 </html>
