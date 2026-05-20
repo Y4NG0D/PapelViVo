@@ -1,1 +1,44 @@
+/* Variáveis de cores baseadas na natureza */
+:root {
+    --verde-principal: #2d6a4f;
+    --verde-claro: #d8f3dc;
+    --verde-destaque: #1b4332;
+}
 
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* Modificando a cor success do Bootstrap para combinar com a marca */
+.text-success { color: var(--verde-principal) !important; }
+.bg-success { background-color: var(--verde-principal) !important; }
+.btn-success {
+    background-color: var(--verde-principal);
+    border-color: var(--verde-principal);
+}
+.btn-success:hover {
+    background-color: var(--verde-destaque);
+    border-color: var(--verde-destaque);
+}
+
+/* Estilo da Seção Hero principal */
+.hero-section {
+    /* Use um gradiente verde limpo, ou adicione uma URL de imagem de folhas */
+    background: linear-gradient(rgba(27, 67, 50, 0.8), rgba(45, 106, 79, 0.8)), url('https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+    min-height: 80vh;
+}
+
+/* Efeito de interatividade nos cards */
+.hover-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.1) !important;
+}
+
+/* Utilitário para limitar largura do formulário */
+.max-w-600 {
+    max-width: 600px;
+}
