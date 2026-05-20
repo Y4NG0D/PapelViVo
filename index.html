@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Papel Vivo | Sustentabilidade Digital</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome para Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand text-success fw-bold" href="#">
+                <i class="fa-solid fa-leaf"></i> Papel Vivo
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre">Nossa Missão</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#impacto">Calculadora de Impacto</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-success text-white px-4 ms-lg-3" href="#contato">Fale Conosco</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section (Destaque Principal) -->
+    <header id="inicio" class="hero-section text-center text-white d-flex align-items-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4">Sustentabilidade em cada detalhe.</h1>
+            <p class="lead mb-5">Transformando ideias em ações ecológicas. Reduza sua pegada de carbono com soluções digitais conscientes.</p>
+            <a href="#sobre" class="btn btn-light btn-lg text-success fw-bold px-5 rounded-pill shadow">Descubra Como</a>
+        </div>
+    </header>
+
+    <!-- Seção Sobre (Cards de Recursos) -->
+    <section id="sobre" class="py-5 bg-light">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold text-success">Por que escolher o Papel Vivo?</h2>
+                <p class="text-muted">Nossos pilares para um mundo mais verde.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4 text-center">
+                    <div class="card border-0 shadow-sm h-100 p-4 hover-card">
+                        <i class="fa-solid fa-recycle fa-3x text-success mb-3"></i>
+                        <h4 class="fw-bold">100% Ecológico</h4>
+                        <p class="text-muted">Processos otimizados para gastar menos energia e gerar zero resíduos físicos.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card border-0 shadow-sm h-100 p-4 hover-card">
+                        <i class="fa-solid fa-tree fa-3x text-success mb-3"></i>
+                        <h4 class="fw-bold">Plantio Ativo</h4>
+                        <p class="text-muted">Parte do nosso esforço é revertido para o reflorestamento de áreas degradadas.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="card border-0 shadow-sm h-100 p-4 hover-card">
+                        <i class="fa-solid fa-lightbulb fa-3x text-success mb-3"></i>
+                        <h4 class="fw-bold">Inovação Limpa</h4>
+                        <p class="text-muted">Tecnologia de ponta aliada ao respeito absoluto pelo meio ambiente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Interativa: Calculadora de Impacto -->
+    <section id="impacto" class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="fw-bold text-success mb-3">Calcule seu Impacto</h2>
+                    <p class="text-muted lead">Descubra quantas árvores você pode salvar ao digitalizar seus processos com o Papel Vivo.</p>
+                </div>
+                <div class="col-lg-6 text-center bg-light p-5 rounded-4 shadow-sm">
+                    <label for="folhasInput" class="form-label fw-bold">Quantas folhas de papel você usa por mês?</label>
+                    <input type="number" id="folhasInput" class="form-control form-control-lg mb-3 text-center" placeholder="Ex: 5000">
+                    <button onclick="calcularArvores()" class="btn btn-success btn-lg w-100 mb-4 rounded-pill">Calcular Impacto</button>
+                    
+                    <div id="resultadoCalculo" class="d-none">
+                        <h3 class="text-success fw-bold"><i class="fa-solid fa-leaf"></i> <span id="arvoresSalvas">0</span> árvores</h3>
+                        <p class="text-muted mb-0">poderiam ser salvas por ano!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="py-5 bg-success text-white">
+        <div class="container py-5 text-center">
+            <h2 class="fw-bold mb-4">Pronto para fazer a diferença?</h2>
+            <p class="mb-5">Junte-se a nós e comece a sua jornada sustentável hoje mesmo.</p>
+            <form id="formContato" class="max-w-600 mx-auto bg-white p-4 rounded-4 shadow text-start">
+                <div class="mb-3">
+                    <label for="nome" class="form-label text-dark fw-bold">Nome</label>
+                    <input type="text" class="form-control" id="nome" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label text-dark fw-bold">E-mail</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <button type="submit" class="btn btn-success w-100 rounded-pill py-2">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Papel Vivo. Todos os direitos reservados para um mundo melhor.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Script Personalizado -->
+    <script src="js/script.js"></script>
+</body>
+</html>
